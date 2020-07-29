@@ -26,13 +26,9 @@ $(call inherit-product, $(LOCAL_PATH)/properties.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk \
-    $(LOCAL_PATH)/overlay-lineage/packages/apps/Snap
 
 # Soong namespaces
 QCOM_SOONG_NAMESPACE := $(LOCAL_PATH)
@@ -229,8 +225,8 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml
 
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
+#PRODUCT_BOOT_JARS += \
+#    qcom.fmradio
 
 # fwk-detect
 PRODUCT_PACKAGES += \
